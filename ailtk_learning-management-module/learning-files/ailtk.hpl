@@ -57,7 +57,7 @@ to MySQL with your login details</note>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
       <height>52</height>
-      <xloc>1664</xloc>
+      <xloc>2096</xloc>
       <yloc>0</yloc>
       <note>. Merged formatted data from
 the .csv file into the data stream</note>
@@ -183,10 +183,30 @@ roasters data on roasters_id</note>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
       <height>31</height>
-      <xloc>2000</xloc>
+      <xloc>2544</xloc>
       <yloc>0</yloc>
       <note>Output</note>
       <width>58</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>90</backgroundcolorblue>
+      <backgroundcolorgreen>58</backgroundcolorgreen>
+      <backgroundcolorred>13</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>235</fontcolorblue>
+      <fontcolorgreen>235</fontcolorgreen>
+      <fontcolorred>235</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>31</height>
+      <xloc>1472</xloc>
+      <yloc>64</yloc>
+      <note>To-do</note>
+      <width>49</width>
     </notepad>
   </notepads>
   <order>
@@ -250,7 +270,160 @@ roasters data on roasters_id</note>
       <to>Merge join 2 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Merge join 2 2</from>
+      <to>Add column names to rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add column names to rows</from>
+      <to>Select and arrange values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields - Output</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select and arrange values</from>
+      <to>Concat Fields - Input</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields - Input</from>
+      <to>Concat Fields - Output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Select and arrange values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select and arrange values 2</from>
+      <to>Concat Fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Concat Fields</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Append streams</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>Append streams</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Append streams</from>
+      <to>Google Sheets Output</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <transform>
+    <name>Add column names to rows</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>rating-inject</name>
+        <nullif>rating:</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>description-inject</name>
+        <nullif>description:</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>name-inject</name>
+        <nullif>name:</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>origin-inject</name>
+        <nullif>origin:</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>roaster-inject</name>
+        <nullif>roaster:</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1696</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Append streams</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <head_name>Select values</head_name>
+    <tail_name>Select values 2</tail_name>
+    <attributes/>
+    <GUI>
+      <xloc>2640</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>CSV file input</name>
     <type>CSVInput</type>
@@ -335,8 +508,230 @@ roasters data on roasters_id</note>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>496</yloc>
+      <xloc>1376</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Concat Fields</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <ConcatFields>
+      <removeSelectedFields>N</removeSelectedFields>
+      <targetFieldLength>0</targetFieldLength>
+      <targetFieldName>output</targetFieldName>
+    </ConcatFields>
+    <enclosure>"</enclosure>
+    <fields>
+      <field>
+        <length>311</length>
+        <name>Content Focus</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>56</length>
+        <name>Online Resource</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>11</length>
+        <name>Type</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>4224</length>
+        <name>Content Summary</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+    </fields>
+    <separator>;</separator>
+    <attributes/>
+    <GUI>
+      <xloc>2144</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Concat Fields - Input</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <ConcatFields>
+      <removeSelectedFields>N</removeSelectedFields>
+      <targetFieldLength>0</targetFieldLength>
+      <targetFieldName>input</targetFieldName>
+    </ConcatFields>
+    <enclosure>"</enclosure>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>name-inject</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>name</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+    </fields>
+    <separator>_</separator>
+    <attributes/>
+    <GUI>
+      <xloc>2064</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Concat Fields - Output</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <ConcatFields>
+      <removeSelectedFields>N</removeSelectedFields>
+      <targetFieldLength>0</targetFieldLength>
+      <targetFieldName>output</targetFieldName>
+    </ConcatFields>
+    <enclosure>"</enclosure>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>rating-inject</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>15</length>
+        <name>rating</name>
+        <nullif/>
+        <precision>0</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>description-inject</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>16383</length>
+        <name>description</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>origin-inject</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>16383</length>
+        <name>origin</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>roaster-inject</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>16383</length>
+        <name>roaster</name>
+        <nullif/>
+        <precision>-1</precision>
+        <trim_type/>
+        <type>String</type>
+      </field>
+    </fields>
+    <separator>_</separator>
+    <attributes/>
+    <GUI>
+      <xloc>2224</xloc>
+      <yloc>144</yloc>
     </GUI>
   </transform>
   <transform>
@@ -362,6 +757,58 @@ roasters data on roasters_id</note>
     <attributes/>
     <GUI>
       <xloc>576</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Merge join 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>origin_id</key>
+    </keys_1>
+    <keys_2>
+      <key>origin_id</key>
+    </keys_2>
+    <transform1>Sort rows 3 2</transform1>
+    <transform2>Sort rows 3</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Merge join 2 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <keys_1>
+      <key>roaster_id</key>
+    </keys_1>
+    <keys_2>
+      <key>roaster_id</key>
+    </keys_2>
+    <transform1>Sort rows 4 2 2</transform1>
+    <transform2>Sort rows 4 </transform2>
+    <attributes/>
+    <GUI>
+      <xloc>1344</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -477,6 +924,154 @@ FROM ailtk_db.roasters
     </GUI>
   </transform>
   <transform>
+    <name>Select and arrange values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>name-inject</name>
+        <rename/>
+      </field>
+      <field>
+        <name>name</name>
+        <rename/>
+      </field>
+      <field>
+        <name>rating-inject</name>
+        <rename/>
+      </field>
+      <field>
+        <name>rating</name>
+        <rename/>
+      </field>
+      <field>
+        <name>description-inject</name>
+        <rename/>
+      </field>
+      <field>
+        <name>description</name>
+        <rename/>
+      </field>
+      <field>
+        <name>origin-inject</name>
+        <rename/>
+      </field>
+      <field>
+        <name>origin</name>
+        <rename/>
+      </field>
+      <field>
+        <name>roaster-inject</name>
+        <rename/>
+      </field>
+      <field>
+        <name>roaster</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1888</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select and arrange values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Product</name>
+      </field>
+      <field>
+        <name>Content Focus</name>
+      </field>
+      <field>
+        <name>Online Resource</name>
+      </field>
+      <field>
+        <name>Type</name>
+      </field>
+      <field>
+        <name>Content Summary</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1872</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>input</name>
+      </field>
+      <field>
+        <name>output</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>2400</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Product</name>
+        <rename>input</rename>
+      </field>
+      <field>
+        <name>output</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>2416</xloc>
+      <yloc>512</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Sort rows</name>
     <type>SortRows</type>
     <description/>
@@ -579,40 +1174,6 @@ FROM ailtk_db.roasters
     </GUI>
   </transform>
   <transform>
-    <name>Sort rows 4 </name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>${java.io.tmpdir}</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>roaster_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1168</xloc>
-      <yloc>512</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Sort rows 3 2</name>
     <type>SortRows</type>
     <description/>
@@ -647,8 +1208,8 @@ FROM ailtk_db.roasters
     </GUI>
   </transform>
   <transform>
-    <name>Merge join 2</name>
-    <type>MergeJoin</type>
+    <name>Sort rows 4 </name>
+    <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -657,19 +1218,27 @@ FROM ailtk_db.roasters
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>origin_id</key>
-    </keys_1>
-    <keys_2>
-      <key>origin_id</key>
-    </keys_2>
-    <transform1>Sort rows 3 2</transform1>
-    <transform2>Sort rows 3</transform2>
+    <directory>${java.io.tmpdir}</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>roaster_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
     <attributes/>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>144</yloc>
+      <xloc>1152</xloc>
+      <yloc>512</yloc>
     </GUI>
   </transform>
   <transform>
@@ -707,8 +1276,8 @@ FROM ailtk_db.roasters
     </GUI>
   </transform>
   <transform>
-    <name>Merge join 2 2</name>
-    <type>MergeJoin</type>
+    <name>Google Sheets Output</name>
+    <type>GoogleSheetsOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -717,35 +1286,19 @@ FROM ailtk_db.roasters
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <join_type>INNER</join_type>
-    <keys_1>
-      <key>origin_id</key>
-    </keys_1>
-    <keys_2>
-      <key>origin_id</key>
-    </keys_2>
-    <transform1>Sort rows 3 2</transform1>
-    <transform2>Sort rows 3</transform2>
+    <APPEND>N</APPEND>
+    <CREATE>Y</CREATE>
+    <SHAREDOMAIN/>
+    <SHAREEMAIL/>
+    <appName/>
+    <impersonation/>
+    <jsonCredentialPath>client_secret.json</jsonCredentialPath>
+    <spreadsheetKey/>
+    <timeout>5</timeout>
+    <worksheetId/>
     <attributes/>
     <GUI>
-      <xloc>1344</xloc>
-      <yloc>144</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Append streams</name>
-    <type>Append</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <GUI>
-      <xloc>1728</xloc>
+      <xloc>2800</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
