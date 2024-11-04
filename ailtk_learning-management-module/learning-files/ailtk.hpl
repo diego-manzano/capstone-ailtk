@@ -203,10 +203,10 @@ roasters data on roasters_id</note>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
       <height>31</height>
-      <xloc>1472</xloc>
-      <yloc>64</yloc>
-      <note>To-do</note>
-      <width>49</width>
+      <xloc>2368</xloc>
+      <yloc>432</yloc>
+      <note>Take note we select  the option to change binary to normal</note>
+      <width>413</width>
     </notepad>
   </notepads>
   <order>
@@ -316,13 +316,13 @@ roasters data on roasters_id</note>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values 2</from>
-      <to>Append streams</to>
+      <from>Append streams</from>
+      <to>Microsoft Excel writer (Take note of where the file is saved)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Append streams</from>
-      <to>Google Sheets Output</to>
+      <from>Select values 2</from>
+      <to>Append streams</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -339,10 +339,6 @@ roasters data on roasters_id</note>
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>rating-inject</name>
         <nullif>rating:</nullif>
@@ -351,10 +347,6 @@ roasters data on roasters_id</note>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>description-inject</name>
         <nullif>description:</nullif>
@@ -363,10 +355,6 @@ roasters data on roasters_id</note>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>name-inject</name>
         <nullif>name:</nullif>
@@ -375,10 +363,6 @@ roasters data on roasters_id</note>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>origin-inject</name>
         <nullif>origin:</nullif>
@@ -387,10 +371,6 @@ roasters data on roasters_id</note>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>roaster-inject</name>
         <nullif>roaster:</nullif>
@@ -581,27 +561,15 @@ roasters data on roasters_id</note>
     <enclosure>"</enclosure>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>name-inject</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>name</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
     </fields>
@@ -631,99 +599,51 @@ roasters data on roasters_id</note>
     <enclosure>"</enclosure>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>rating-inject</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>15</length>
         <name>rating</name>
-        <nullif/>
         <precision>0</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>description-inject</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>16383</length>
         <name>description</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>origin-inject</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>16383</length>
         <name>origin</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>roaster-inject</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>16383</length>
         <name>roaster</name>
-        <nullif/>
         <precision>-1</precision>
-        <trim_type/>
         <type>String</type>
       </field>
     </fields>
@@ -809,6 +729,73 @@ roasters data on roasters_id</note>
     <attributes/>
     <GUI>
       <xloc>1344</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Microsoft Excel writer (Take note of where the file is saved)</name>
+    <type>TypeExitExcelWriterTransform</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <appendEmpty>0</appendEmpty>
+    <appendLines>N</appendLines>
+    <appendOffset>0</appendOffset>
+    <appendOmitHeader>N</appendOmitHeader>
+    <fields>
+      <field>
+        <formula>N</formula>
+        <name>input</name>
+        <title>input</title>
+        <type>String</type>
+      </field>
+      <field>
+        <formula>N</formula>
+        <name>output</name>
+        <title>output</title>
+        <type>String</type>
+      </field>
+    </fields>
+    <file>
+      <SpecifyFormat>N</SpecifyFormat>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <autosizecolums>N</autosizecolums>
+      <createParentFolder>Y</createParentFolder>
+      <do_not_open_newfile_init>Y</do_not_open_newfile_init>
+      <extension>xlsx</extension>
+      <filename_in_field>N</filename_in_field>
+      <if_file_exists>new</if_file_exists>
+      <if_sheet_exists>new</if_sheet_exists>
+      <name>ailtk-tuning-dataset</name>
+      <protect_sheet>N</protect_sheet>
+      <sheetname>Sheet1</sheetname>
+      <split>N</split>
+      <splitevery>0</splitevery>
+      <stream_data>N</stream_data>
+    </file>
+    <footer>N</footer>
+    <forceFormulaRecalculation>N</forceFormulaRecalculation>
+    <header>Y</header>
+    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
+    <makeSheetActive>Y</makeSheetActive>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <startingCell>A1</startingCell>
+    <template>
+      <enabled>N</enabled>
+      <filename>template.xls</filename>
+      <hidden>N</hidden>
+      <sheet_enabled>N</sheet_enabled>
+    </template>
+    <attributes/>
+    <GUI>
+      <xloc>2912</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -937,43 +924,33 @@ FROM ailtk_db.roasters
     <fields>
       <field>
         <name>name-inject</name>
-        <rename/>
       </field>
       <field>
         <name>name</name>
-        <rename/>
       </field>
       <field>
         <name>rating-inject</name>
-        <rename/>
       </field>
       <field>
         <name>rating</name>
-        <rename/>
       </field>
       <field>
         <name>description-inject</name>
-        <rename/>
       </field>
       <field>
         <name>description</name>
-        <rename/>
       </field>
       <field>
         <name>origin-inject</name>
-        <rename/>
       </field>
       <field>
         <name>origin</name>
-        <rename/>
       </field>
       <field>
         <name>roaster-inject</name>
-        <rename/>
       </field>
       <field>
         <name>roaster</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -997,18 +974,23 @@ FROM ailtk_db.roasters
     <fields>
       <field>
         <name>Product</name>
+        <rename>input</rename>
       </field>
       <field>
         <name>Content Focus</name>
+        <rename/>
       </field>
       <field>
         <name>Online Resource</name>
+        <rename/>
       </field>
       <field>
         <name>Type</name>
+        <rename/>
       </field>
       <field>
         <name>Content Summary</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1032,15 +1014,51 @@ FROM ailtk_db.roasters
     <fields>
       <field>
         <name>input</name>
+        <rename/>
       </field>
       <field>
         <name>output</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>input</name>
+        <rename>input</rename>
+        <type>String</type>
+        <length>190</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>output</name>
+        <rename>output</rename>
+        <type>String</type>
+        <length>9999</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2400</xloc>
+      <xloc>2416</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -1057,13 +1075,48 @@ FROM ailtk_db.roasters
     </partitioning>
     <fields>
       <field>
-        <name>Product</name>
-        <rename>input</rename>
+        <name>input</name>
+        <rename/>
       </field>
       <field>
         <name>output</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>input</name>
+        <rename>input</rename>
+        <type>String</type>
+        <length>190</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type>normal</storage_type>
+      </meta>
+      <meta>
+        <name>output</name>
+        <rename>output</rename>
+        <type>String</type>
+        <length>9999</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type>normal</storage_type>
+      </meta>
     </fields>
     <attributes/>
     <GUI>
@@ -1276,8 +1329,8 @@ FROM ailtk_db.roasters
     </GUI>
   </transform>
   <transform>
-    <name>Google Sheets Output</name>
-    <type>GoogleSheetsOutput</type>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1286,20 +1339,12 @@ FROM ailtk_db.roasters
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <APPEND>N</APPEND>
-    <CREATE>Y</CREATE>
-    <SHAREDOMAIN/>
-    <SHAREEMAIL/>
-    <appName/>
-    <impersonation/>
-    <jsonCredentialPath>client_secret.json</jsonCredentialPath>
-    <spreadsheetKey/>
-    <timeout>5</timeout>
-    <worksheetId/>
+    <fields>
+</fields>
     <attributes/>
     <GUI>
-      <xloc>2800</xloc>
-      <yloc>144</yloc>
+      <xloc>1600</xloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
