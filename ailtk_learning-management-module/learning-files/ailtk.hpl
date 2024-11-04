@@ -57,11 +57,11 @@ to MySQL with your login details</note>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
       <height>52</height>
-      <xloc>2096</xloc>
+      <xloc>2656</xloc>
       <yloc>0</yloc>
-      <note>. Merged formatted data from
-the .csv file into the data stream</note>
-      <width>229</width>
+      <note>12. Merge the two identically
+formatted data streams together.</note>
+      <width>237</width>
     </notepad>
     <notepad>
       <backgroundcolorblue>90</backgroundcolorblue>
@@ -77,12 +77,11 @@ the .csv file into the data stream</note>
       <fontitalic>N</fontitalic>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
-      <height>52</height>
-      <xloc>576</xloc>
-      <yloc>288</yloc>
-      <note>Text box!
-</note>
-      <width>72</width>
+      <height>31</height>
+      <xloc>80</xloc>
+      <yloc>624</yloc>
+      <note>Asset</note>
+      <width>46</width>
     </notepad>
     <notepad>
       <backgroundcolorblue>251</backgroundcolorblue>
@@ -99,10 +98,10 @@ the .csv file into the data stream</note>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
       <height>31</height>
-      <xloc>672</xloc>
-      <yloc>288</yloc>
-      <note>Text box!</note>
-      <width>72</width>
+      <xloc>160</xloc>
+      <yloc>624</yloc>
+      <note>Asset</note>
+      <width>46</width>
     </notepad>
     <notepad>
       <backgroundcolorblue>90</backgroundcolorblue>
@@ -161,32 +160,11 @@ references </note>
       <fontitalic>N</fontitalic>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
-      <height>52</height>
-      <xloc>1296</xloc>
-      <yloc>0</yloc>
-      <note>5. Sort main stream and
-roasters data on roasters_id</note>
-      <width>202</width>
-    </notepad>
-    <notepad>
-      <backgroundcolorblue>251</backgroundcolorblue>
-      <backgroundcolorgreen>232</backgroundcolorgreen>
-      <backgroundcolorred>201</backgroundcolorred>
-      <bordercolorblue>90</bordercolorblue>
-      <bordercolorgreen>58</bordercolorgreen>
-      <bordercolorred>14</bordercolorred>
-      <fontbold>N</fontbold>
-      <fontcolorblue>90</fontcolorblue>
-      <fontcolorgreen>58</fontcolorgreen>
-      <fontcolorred>14</fontcolorred>
-      <fontitalic>N</fontitalic>
-      <fontname>.AppleSystemUIFont</fontname>
-      <fontsize>13</fontsize>
       <height>31</height>
-      <xloc>2544</xloc>
+      <xloc>752</xloc>
       <yloc>0</yloc>
-      <note>Output</note>
-      <width>58</width>
+      <note>5. Repeat sorting and merging with the other tables</note>
+      <width>365</width>
     </notepad>
     <notepad>
       <backgroundcolorblue>90</backgroundcolorblue>
@@ -202,11 +180,149 @@ roasters data on roasters_id</note>
       <fontitalic>N</fontitalic>
       <fontname>.AppleSystemUIFont</fontname>
       <fontsize>13</fontsize>
-      <height>31</height>
-      <xloc>2368</xloc>
-      <yloc>432</yloc>
-      <note>Take note we select  the option to change binary to normal</note>
-      <width>413</width>
+      <height>52</height>
+      <xloc>2128</xloc>
+      <yloc>384</yloc>
+      <note>11. Concat the fields into inputs and outputs
+similarly to the initial data stream.</note>
+      <width>313</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorred>201</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>90</fontcolorblue>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorred>14</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>52</height>
+      <xloc>1488</xloc>
+      <yloc>0</yloc>
+      <note>6. Append column names into rows
+to serve as data labels.</note>
+      <width>254</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>90</backgroundcolorblue>
+      <backgroundcolorgreen>58</backgroundcolorgreen>
+      <backgroundcolorred>13</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>235</fontcolorblue>
+      <fontcolorgreen>235</fontcolorgreen>
+      <fontcolorred>235</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>136</height>
+      <xloc>1872</xloc>
+      <yloc>0</yloc>
+      <note>7. Concat the fields which 
+will serve as the sample input
+of the model's fine-tuning 
+dataset. In this scenario we
+will concat the product name 
+and its data label.</note>
+      <width>214</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorred>201</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>90</fontcolorblue>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorred>14</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>94</height>
+      <xloc>2144</xloc>
+      <yloc>0</yloc>
+      <note>8. Concat the rest of the fields
+and their data labels for the 
+model fine-tuning dataset 
+output columns.</note>
+      <width>214</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>90</backgroundcolorblue>
+      <backgroundcolorgreen>58</backgroundcolorgreen>
+      <backgroundcolorred>13</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>235</fontcolorblue>
+      <fontcolorgreen>235</fontcolorgreen>
+      <fontcolorred>235</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>94</height>
+      <xloc>2400</xloc>
+      <yloc>0</yloc>
+      <note>9. Select the input and output
+columns and drop the other 
+columns from the stream
+</note>
+      <width>212</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorred>201</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>90</fontcolorblue>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorred>14</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>73</height>
+      <xloc>1664</xloc>
+      <yloc>384</yloc>
+      <note>10. Select from the
+coffeepro-online-resources-exported.csv
+file provided.</note>
+      <width>288</width>
+    </notepad>
+    <notepad>
+      <backgroundcolorblue>90</backgroundcolorblue>
+      <backgroundcolorgreen>58</backgroundcolorgreen>
+      <backgroundcolorred>13</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>235</fontcolorblue>
+      <fontcolorgreen>235</fontcolorgreen>
+      <fontcolorred>235</fontcolorred>
+      <fontitalic>N</fontitalic>
+      <fontname>.AppleSystemUIFont</fontname>
+      <fontsize>13</fontsize>
+      <height>94</height>
+      <xloc>2976</xloc>
+      <yloc>0</yloc>
+      <note>13. Output the file for later use.
+Take note of the directory where
+the file is saved as it will later be
+used to fine-tune your model.</note>
+      <width>232</width>
     </notepad>
   </notepads>
   <order>
@@ -381,7 +497,7 @@ roasters data on roasters_id</note>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1696</xloc>
+      <xloc>1568</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -400,7 +516,7 @@ roasters data on roasters_id</note>
     <tail_name>Select values 2</tail_name>
     <attributes/>
     <GUI>
-      <xloc>2640</xloc>
+      <xloc>2688</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -488,7 +604,7 @@ roasters data on roasters_id</note>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1792</xloc>
       <yloc>512</yloc>
     </GUI>
   </transform>
@@ -538,7 +654,7 @@ roasters data on roasters_id</note>
     <separator>;</separator>
     <attributes/>
     <GUI>
-      <xloc>2144</xloc>
+      <xloc>2272</xloc>
       <yloc>512</yloc>
     </GUI>
   </transform>
@@ -576,7 +692,7 @@ roasters data on roasters_id</note>
     <separator>_</separator>
     <attributes/>
     <GUI>
-      <xloc>2064</xloc>
+      <xloc>1952</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -650,7 +766,7 @@ roasters data on roasters_id</note>
     <separator>_</separator>
     <attributes/>
     <GUI>
-      <xloc>2224</xloc>
+      <xloc>2240</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -750,15 +866,27 @@ roasters data on roasters_id</note>
     <appendOmitHeader>N</appendOmitHeader>
     <fields>
       <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
         <formula>N</formula>
+        <hyperlinkField/>
         <name>input</name>
+        <styleCell/>
         <title>input</title>
+        <titleStyleCell/>
         <type>String</type>
       </field>
       <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
         <formula>N</formula>
+        <hyperlinkField/>
         <name>output</name>
+        <styleCell/>
         <title>output</title>
+        <titleStyleCell/>
         <type>String</type>
       </field>
     </fields>
@@ -768,13 +896,17 @@ roasters data on roasters_id</note>
       <add_time>N</add_time>
       <autosizecolums>N</autosizecolums>
       <createParentFolder>Y</createParentFolder>
+      <date_time_format/>
       <do_not_open_newfile_init>Y</do_not_open_newfile_init>
       <extension>xlsx</extension>
+      <filename_field/>
       <filename_in_field>N</filename_in_field>
       <if_file_exists>new</if_file_exists>
       <if_sheet_exists>new</if_sheet_exists>
       <name>ailtk-tuning-dataset</name>
+      <password/>
       <protect_sheet>N</protect_sheet>
+      <protected_by/>
       <sheetname>Sheet1</sheetname>
       <split>N</split>
       <splitevery>0</splitevery>
@@ -786,16 +918,18 @@ roasters data on roasters_id</note>
     <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
     <makeSheetActive>Y</makeSheetActive>
     <rowWritingMethod>overwrite</rowWritingMethod>
+    <schemaDefinition/>
     <startingCell>A1</startingCell>
     <template>
       <enabled>N</enabled>
       <filename>template.xls</filename>
       <hidden>N</hidden>
       <sheet_enabled>N</sheet_enabled>
+      <sheetname/>
     </template>
     <attributes/>
     <GUI>
-      <xloc>2912</xloc>
+      <xloc>3008</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -956,7 +1090,7 @@ FROM ailtk_db.roasters
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1888</xloc>
+      <xloc>1776</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -978,25 +1112,21 @@ FROM ailtk_db.roasters
       </field>
       <field>
         <name>Content Focus</name>
-        <rename/>
       </field>
       <field>
         <name>Online Resource</name>
-        <rename/>
       </field>
       <field>
         <name>Type</name>
-        <rename/>
       </field>
       <field>
         <name>Content Summary</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>1872</xloc>
+      <xloc>2048</xloc>
       <yloc>512</yloc>
     </GUI>
   </transform>
@@ -1014,11 +1144,9 @@ FROM ailtk_db.roasters
     <fields>
       <field>
         <name>input</name>
-        <rename/>
       </field>
       <field>
         <name>output</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1058,7 +1186,7 @@ FROM ailtk_db.roasters
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2416</xloc>
+      <xloc>2448</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -1076,11 +1204,9 @@ FROM ailtk_db.roasters
     <fields>
       <field>
         <name>input</name>
-        <rename/>
       </field>
       <field>
         <name>output</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1120,7 +1246,7 @@ FROM ailtk_db.roasters
     </fields>
     <attributes/>
     <GUI>
-      <xloc>2416</xloc>
+      <xloc>2480</xloc>
       <yloc>512</yloc>
     </GUI>
   </transform>
@@ -1326,25 +1452,6 @@ FROM ailtk_db.roasters
     <GUI>
       <xloc>1168</xloc>
       <yloc>144</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Replace in string</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-</fields>
-    <attributes/>
-    <GUI>
-      <xloc>1600</xloc>
-      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
