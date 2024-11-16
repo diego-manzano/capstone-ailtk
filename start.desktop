@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Toolkit Launcher
+Comment=DLSU IT CAPSTONE Manzano and Siy
+Exec=gnome-terminal -- bash -c "source /home/ailtk-learner/miniconda3/etc/profile.d/conda.sh && conda activate ailtk-env && xdg-open http://localhost:8866  && voila /home/ailtk-learner/Documents/GitHub/capstone-ailtk --no-browser --port=8866; exec bash"
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Development;
