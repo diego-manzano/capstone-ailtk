@@ -1071,15 +1071,27 @@ Reviewer and review</note>
     <appendOmitHeader>N</appendOmitHeader>
     <fields>
       <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
         <formula>N</formula>
+        <hyperlinkField/>
         <name>input</name>
+        <styleCell/>
         <title>input</title>
+        <titleStyleCell/>
         <type>String</type>
       </field>
       <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
         <formula>N</formula>
+        <hyperlinkField/>
         <name>output</name>
+        <styleCell/>
         <title>output</title>
+        <titleStyleCell/>
         <type>String</type>
       </field>
     </fields>
@@ -1089,13 +1101,17 @@ Reviewer and review</note>
       <add_time>N</add_time>
       <autosizecolums>N</autosizecolums>
       <createParentFolder>Y</createParentFolder>
+      <date_time_format/>
       <do_not_open_newfile_init>Y</do_not_open_newfile_init>
-      <extension>xlsx</extension>
+      <extension>xls</extension>
+      <filename_field/>
       <filename_in_field>N</filename_in_field>
       <if_file_exists>new</if_file_exists>
       <if_sheet_exists>new</if_sheet_exists>
       <name>ailtk-case-apache-hop-output</name>
+      <password/>
       <protect_sheet>N</protect_sheet>
+      <protected_by/>
       <sheetname>Sheet1</sheetname>
       <split>N</split>
       <splitevery>0</splitevery>
@@ -1107,12 +1123,14 @@ Reviewer and review</note>
     <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
     <makeSheetActive>Y</makeSheetActive>
     <rowWritingMethod>overwrite</rowWritingMethod>
+    <schemaDefinition/>
     <startingCell>A1</startingCell>
     <template>
       <enabled>N</enabled>
       <filename>template.xls</filename>
       <hidden>N</hidden>
       <sheet_enabled>N</sheet_enabled>
+      <sheetname/>
     </template>
     <attributes/>
     <GUI>
