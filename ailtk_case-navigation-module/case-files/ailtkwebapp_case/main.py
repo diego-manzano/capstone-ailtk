@@ -98,6 +98,7 @@ MODEL = genai.GenerativeModel(
     DO NOT use info if not relevant to user prompt. Do not make up info to answer the user, admit if you do not have the info to answer their query and apologize on behalf of CoffeePro."""
 )
 
+#TODO
 # Path to the pickle file
 PICKLE_FILE = "corpus.pkl"
 
