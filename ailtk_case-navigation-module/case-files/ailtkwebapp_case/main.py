@@ -149,7 +149,7 @@ def get_db_connection():
         host="localhost",  # Update with your DB host
         user="root",  # Update with your MySQL username
         password="",  # Update with your MySQL password
-        database="ailtk_feedback"  # Update with your database name
+        database="ailtk_welp_feedback"  # Update with your database name
     )
 
 @app.route("/api/submit-feedback", methods=["POST"])
