@@ -144,9 +144,15 @@ if __name__ == "__main__":
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",  # Update with your DB host
+<<<<<<< Updated upstream
         user="root",  # Update with your MySQL username
         password="",  # Update with your MySQL password
         database="ailtk_welp_feedback"  # Update with your database name
+=======
+        user="ailtk-learner",  # Update with your MySQL username
+        password="DLSU1234!",  # Update with your MySQL password
+        database="ailtk_web_feedback"  # Update with your database name
+>>>>>>> Stashed changes
     )
 
 @app.route("/api/submit-feedback", methods=["POST"])
